@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.ocean.lib.io.DBUtils;
+import com.ilmtest.lib.io.DBUtils;
 
 /**
  * Removes all the tashkeel from a specific column in a database table.

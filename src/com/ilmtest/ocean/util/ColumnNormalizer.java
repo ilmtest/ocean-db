@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.Map;
 import java.util.TreeMap;
 
-import com.ocean.lib.io.DBUtils;
-import com.ocean.lib.text.TextUtils;
+import com.ilmtest.lib.io.DBUtils;
+import com.ilmtest.util.text.TextUtils;
 
 /**
  * Removes all the tashkeel from a specific column in a database table.

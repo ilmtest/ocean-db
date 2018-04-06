@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.ocean.lib.io.DBUtils;
+import com.ilmtest.lib.io.DBUtils;
 
 public class LibraryCollector
 {
