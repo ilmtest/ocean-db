@@ -95,7 +95,7 @@ public class SahihBukhariPopulator
 		File f = IOUtils.getFreshFile("/Users/rhaq/workspace/resources/bukhari.db");
 		c = DriverManager.getConnection("jdbc:sqlite:"+f.getPath());
 		DatabaseBoundary db = new DatabaseBoundary();
-		db.process(c, m_entries, 335);
+		db.process(c, m_entries, 335, 0);
 
 		Dictionary d = new Dictionary();
 		SunnahDotComDictionary.apply(d);

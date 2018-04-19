@@ -164,7 +164,7 @@ public class AbuDawudPopulator
 		File f = IOUtils.getFreshFile("/Users/rhaq/workspace/resources/abudawud.db");
 		c = DriverManager.getConnection("jdbc:sqlite:"+f.getPath());
 		DatabaseBoundary db = new DatabaseBoundary();
-		db.process(c, m_entries, 341);
+		db.process(c, m_entries, 341, 0);
 
 		Dictionary d = new Dictionary();
 		SunnahDotComDictionary.apply(d);
