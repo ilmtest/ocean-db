@@ -125,21 +125,7 @@ public class AbuDawudPopulator
 			
 			if (e.englishGrade == null && e.arabicGrade != null)
 			{
-				if ( e.arabicGrade.startsWith("صحيح") || e.arabicGrade.endsWith(") صحيح") ) {
-					e.englishGrade = "Sahih";
-				} else if ( e.arabicGrade.startsWith("حسن صحيح") ) {
-					e.englishGrade = "Hasan Sahih";
-				} else if ( e.arabicGrade.startsWith("حسن") || e.arabicGrade.endsWith(") حسن") ) {
-					e.englishGrade = "Hasan";
-				} else if ( e.arabicGrade.startsWith("ضعيف") ) {
-					e.englishGrade = "Da'if";
-				} else if ( e.arabicGrade.startsWith("منكر") ) {
-					e.englishGrade = "Munkar";
-				} else if ( e.arabicGrade.startsWith("مقطوع") ) {
-					e.englishGrade = "Maqtu'";
-				} else if ( e.arabicGrade.startsWith("شاذ") ) {
-					e.englishGrade = "Shaadh";
-				} else {
+				if ( !GradeUtils.translateGrade(e) ) {
 					System.out.println(e.arabicIndex+" EnglishGradingMissing: "+e.arabicGrade);
 				}
 			}
