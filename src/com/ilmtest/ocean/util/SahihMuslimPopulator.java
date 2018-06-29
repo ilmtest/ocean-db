@@ -16,7 +16,7 @@ import com.ilmtest.searchengine.model.Book;
 import com.ilmtest.searchengine.model.Chapter;
 import com.ilmtest.searchengine.model.Entry;
 import com.ilmtest.shamela.controller.Populator;
-import com.ilmtest.shamela.processors.SahihMuslimProcessor;
+import com.ilmtest.shamela.processors.SahihMuslim;
 import com.ilmtest.sunnah.com.boundary.DatabaseBoundary;
 import com.ilmtest.sunnah.com.boundary.Dictionary;
 import com.ilmtest.sunnah.com.boundary.SunnahDotComDictionary;
@@ -73,7 +73,7 @@ public class SahihMuslimPopulator
 		
 		// vowelled ones, we just want the grades
 		System.out.println("Searching for matches in vowels...");
-		Populator p = new Populator( new SahihMuslimProcessor() );
+		Populator p = new Populator( new SahihMuslim() );
 		Connection c = DriverManager.getConnection("jdbc:sqlite:"+new File("/Users/rhaq/workspace/resources/raw/1727.db").getPath());
 		p.process(c);
 		c.close();

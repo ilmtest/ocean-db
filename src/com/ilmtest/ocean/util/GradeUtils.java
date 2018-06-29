@@ -9,11 +9,11 @@ public class GradeUtils
 		String arabicGrade = e.arabicGrade.trim();
 		
 		if (arabicGrade.startsWith("صحيح موقوفا")) {
-			e.englishGrade = "Sahīh Mawqūf";
+			e.englishGrade = "Ṣaḥīḥ Mawqūf";
 		} else if ( arabicGrade.startsWith("صحيح") || arabicGrade.endsWith(") صحيح") ) {
-			e.englishGrade = "Sahīh (Authentic)";
+			e.englishGrade = "Ṣaḥīḥ (Authentic)";
 		} else if ( arabicGrade.startsWith("حسن صحيح") ) {
-			e.englishGrade = "Hasan Sahīh";
+			e.englishGrade = "Hasan Ṣaḥīḥ";
 		} else if ( arabicGrade.startsWith("حسن") || arabicGrade.endsWith(") حسن") ) {
 			e.englishGrade = "Hasan (Good)";
 		} else if (arabicGrade.startsWith("حسن")) {

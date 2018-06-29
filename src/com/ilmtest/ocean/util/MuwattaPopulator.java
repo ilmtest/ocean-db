@@ -12,7 +12,7 @@ import com.ilmtest.lib.io.IOUtils;
 import com.ilmtest.searchengine.model.Chapter;
 import com.ilmtest.searchengine.model.Entry;
 import com.ilmtest.shamela.controller.Populator;
-import com.ilmtest.shamela.processors.SahihMuslimProcessor;
+import com.ilmtest.shamela.processors.SahihMuslim;
 import com.ilmtest.sunnah.com.boundary.DatabaseBoundary;
 import com.ilmtest.sunnah.com.boundary.Dictionary;
 import com.ilmtest.sunnah.com.boundary.SunnahDotComDictionary;
@@ -65,7 +65,7 @@ public class MuwattaPopulator
 
 		System.out.println("Searching for matches in vowels...");
 		NormalizedLevenshtein l = new NormalizedLevenshtein();
-		Populator p = new Populator( new SahihMuslimProcessor() );
+		Populator p = new Populator( new SahihMuslim() );
 		Connection c = DriverManager.getConnection("jdbc:sqlite:"+new File("/Users/rhaq/workspace/resources/raw/1699.db").getPath());
 		p.process(c);
 		c.close();
