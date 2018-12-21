@@ -43,10 +43,17 @@ public class ColumnNormalizer
 
 		while ( rs.next() )
 		{
-			int id = rs.getInt(idColumn);
-			String arabic = TextUtils.normalize( rs.getString(sourceColumn) );
-
-			m_entries.put(id, arabic);
+			String value = rs.getString(sourceColumn);
+			
+			if (value != null)
+			{
+				int id = rs.getInt(idColumn);
+				String arabic = TextUtils.normalize(value, true);
+				
+				if ( !arabic.trim().isEmpty() ) {
+					m_entries.put(id, arabic);
+				}
+			}
 		}
 		
 		ps.close();
